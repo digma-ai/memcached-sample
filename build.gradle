@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+    id ("org.springframework.boot") version "3.2.5"
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group 'com.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-cache'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'io.sixhours:memcached-spring-boot-starter:2.5.0'
+    implementation 'net.spy:spymemcached:2.12.3'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+}
+
+task run(type: JavaExec) {
+    main = 'com.example.Application'
+    classpath = sourceSets.main.runtimeClasspath
+}
+

@@ -1,0 +1,1 @@
+docker run --name my-memcache -d memcached
