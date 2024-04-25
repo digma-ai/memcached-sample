@@ -1,8 +1,0 @@
-memcached.cache:
-  servers: localhost:11211
-  provider: static
-  expiration: 1d
-  expiration-per-cache:
-    cache_name1: 1h
-    cache_name2: 30h
-  metrics-cache-names: cache_name1
