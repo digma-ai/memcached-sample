@@ -1,1 +1,1 @@
-docker run --name my-memcache -d memcached
+docker run --name digma-memcache -d memcached
