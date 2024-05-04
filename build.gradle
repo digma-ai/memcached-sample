@@ -15,8 +15,11 @@ repositories {
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-cache'
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'io.sixhours:memcached-spring-boot-starter:2.5.0'
-    implementation 'net.spy:spymemcached:2.12.3'
+    implementation('io.sixhours:memcached-spring-boot-starter:2.5.0'){
+        exclude group: 'com.googlecode.xmemcached', module: 'xmemcached'
+    }
+    implementation('com.amazonaws:elasticache-java-cluster-client:1.2.0')
+//    implementation 'net.spy:spymemcached:2.12.3'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
 }
